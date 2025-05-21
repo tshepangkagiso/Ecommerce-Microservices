@@ -1,22 +1,48 @@
 @baseUrl = https://localhost:5050
+@productId = 0196f4fd-c632-4981-af3c-84d190051b8e
+@category = c1
 
 ### GET Request 
-GET {{baseUrl}}
+GET {{baseUrl}}/products
 Accept: application/json
 
-###
+### GET Request By Id 
+GET {{baseUrl}}/products/{{productId}}
+Accept: application/json
+
+### GET Request By Category 
+GET {{baseUrl}}/products/category/{{category}}
+Accept: application/json
+
 
 ### POST Request
 POST {{baseUrl}}/products
 Content-Type: application/json
 
 {
-    "Name": "New Product A",
+    "Name": "New Product G",
     "Category": ["c1", "c2"],
     "Description": "Description Product A",
     "ImageFile": "ImageFile Product A",
     "Price": 199
 }
+
+### PUT Request
+PUT {{baseUrl}}/products
+Content-Type: application/json
+
+{
+    "Id": "{{productId}}",
+    "Name": "New Product A",
+    "Category": ["c2", "c3"],
+    "Description": "Description Product A",
+    "ImageFile": "ImageFile Product A",
+    "Price": 199
+}
+
+### DELETE Request By Id 
+DELETE {{baseUrl}}/products/{{productId}}
+Accept: application/json
 
 
 
