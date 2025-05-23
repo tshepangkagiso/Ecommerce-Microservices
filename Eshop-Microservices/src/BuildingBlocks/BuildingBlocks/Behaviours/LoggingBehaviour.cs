@@ -1,11 +1,16 @@
-﻿using MediatR;
-using System.Diagnostics;
-using Microsoft.Extensions.Logging;
-
-namespace BuildingBlocks.Behaviours;
-
-public class LoggingBehavior<TRequest, TResponse>
-    (ILogger<LoggingBehavior<TRequest, TResponse>> logger)
+﻿namespace BuildingBlocks.Behaviours;
+/**
+ * This class is a MediatR pipeline behavior that logs the handling of requests.
+ * It provides basic start/end logs for request handling and logs a performance warning
+ * if the processing time exceeds 3 seconds.
+ * 
+ * - Logs the request type, response type, and request data at the start.
+ * - Measures the time taken to handle the request using Stopwatch.
+ * - If the request takes more than 3 seconds, logs a performance warning.
+ * - Logs completion of the request with type information.
+ * - Useful for tracing and identifying performance bottlenecks.
+ */
+public class LoggingBehavior<TRequest, TResponse> (ILogger<LoggingBehavior<TRequest, TResponse>> logger)
     : IPipelineBehavior<TRequest, TResponse>
     where TRequest : notnull, IRequest<TResponse>
     where TResponse : notnull

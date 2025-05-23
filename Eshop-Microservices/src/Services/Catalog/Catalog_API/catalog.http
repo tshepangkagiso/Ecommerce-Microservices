@@ -1,9 +1,17 @@
-@baseUrl = https://localhost:5050
-@productId = 0196f4fd-c632-4981-af3c-84d190051b8e
-@category = c1
+@baseUrl = https://localhost:6060
+@productId = 5334c996-8457-4cf0-815c-ed2b77c4ff61
+@category = Smart Phone
+
+### Get Health Check
+GET {{baseUrl}}/health
+Accept: application/json
 
 ### GET Request 
 GET {{baseUrl}}/products
+Accept: application/json
+
+### GET Request Paganation query
+GET {{baseUrl}}/products?pageNumber=1&pageSize=5
 Accept: application/json
 
 ### GET Request By Id 
