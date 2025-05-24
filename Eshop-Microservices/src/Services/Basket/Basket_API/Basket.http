@@ -1,5 +1,5 @@
-@baseUrl = https://localhost:5051
-@username = user1
+@baseUrl = https://localhost:6061
+@username = user2
 
 ### Get Health Check
 GET {{baseUrl}}/health
