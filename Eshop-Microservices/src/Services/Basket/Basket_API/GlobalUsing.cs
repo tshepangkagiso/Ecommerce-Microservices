@@ -12,7 +12,6 @@ global using Basket_API.Data;
 global using Basket_API.Exceptions;
 global using Microsoft.Extensions.Caching.Distributed;
 global using System.Text.Json;
-global using Marten.Schema;
-global using Marten.Pagination;
 global using HealthChecks.UI.Client;
 global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+global using Discount.Grpc;
