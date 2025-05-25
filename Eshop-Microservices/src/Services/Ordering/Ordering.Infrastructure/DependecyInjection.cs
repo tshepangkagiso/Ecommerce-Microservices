@@ -1,5 +1,4 @@
-﻿
-namespace Ordering.Infrastructure;
+﻿namespace Ordering.Infrastructure;
 public static class DependecyInjection
 {
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
@@ -15,7 +14,7 @@ public static class DependecyInjection
             options.UseSqlServer(connectionString);
         });
 
-        //services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+        services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
         return services;
     }
 }

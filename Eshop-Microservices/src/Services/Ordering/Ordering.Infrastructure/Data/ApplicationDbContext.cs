@@ -1,6 +1,6 @@
 ﻿namespace Ordering.Infrastructure.Data;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
     //Add-Migration InitialCreate -OutputDir Data/Migrations -Project Ordering.Infrastructure -StartupProject Ordering_API
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
