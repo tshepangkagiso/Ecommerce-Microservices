@@ -1,0 +1,5 @@
+@baseUrl = https://localhost:5053
+
+### Get Health Check
+GET {{baseUrl}}/health
+Accept: application/json
