@@ -1,15 +1,5 @@
 ﻿namespace Ordering.Application.Orders.EventHandlers.Integration;
-
-public class BasketCheckoutEventHandler
-{
-}
-/*﻿using BuildingBlocks.Messaging.Events;
-using MassTransit;
-using Ordering.Application.Orders.Commands.CreateOrder;
-
-namespace Ordering.Application.Orders.EventHandlers.Integration;
-public class BasketCheckoutEventHandler
-    (ISender sender, ILogger<BasketCheckoutEventHandler> logger)
+public class BasketCheckoutEventHandler(ISender sender, ILogger<BasketCheckoutEventHandler> logger)
     : IConsumer<BasketCheckoutEvent>
 {
     public async Task Consume(ConsumeContext<BasketCheckoutEvent> context)
@@ -45,4 +35,3 @@ public class BasketCheckoutEventHandler
         return new CreateOrderCommand(orderDto);
     }
 }
- */

@@ -1,5 +1,5 @@
-@baseUrl = https://localhost:6061
-@username = user2
+@baseUrl = https://localhost:5051
+@username = user1
 
 ### Get Health Check
 GET {{baseUrl}}/health
@@ -9,7 +9,7 @@ Accept: application/json
 GET {{baseUrl}}/basket/{{username}}
 Accept: application/json
 
-### POST Request
+### POST Request Add To Cart
 POST {{baseUrl}}/basket
 Content-Type: application/json
 
@@ -34,6 +34,31 @@ Content-Type: application/json
       }
     ]
   }
+}
+
+### POST CheckOut
+POST {{baseUrl}}/basket/checkout
+Content-Type: application/json
+
+{
+	"BasketCheckoutDto": 
+        {
+		  "userName": "{{username}}",
+		  "CustomerId": "189dc8dc-990f-48e0-a37b-e6f2b60b9d7d",
+		  "totalPrice": 0,
+		  "firstName": "{{username}} FirstName",
+		  "lastName": "{{username}} LastName",
+		  "emailAddress": "test@test.com",
+		  "addressLine": "34 Charles Street",
+		  "country": "USA",
+		  "state": "Michigan",
+		  "zipCode": "48198",
+		  "cardName": "swn",
+		  "cardNumber": "485-3184",
+		  "expiration": "11/30",
+		  "cvv": "333",
+		  "paymentMethod": 1
+		}
 }
 
 ### DELETE Request By Username 

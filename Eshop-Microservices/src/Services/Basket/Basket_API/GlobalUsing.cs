@@ -15,3 +15,8 @@ global using System.Text.Json;
 global using HealthChecks.UI.Client;
 global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 global using Discount.Grpc;
+global using BuildingBlocks.Messaging.MassTransit;
+global using Basket.API.Dtos;
+global using BuildingBlocks.Messaging.Events;
+global using MassTransit;
+global using Basket.API.Basket.CheckoutBasket;

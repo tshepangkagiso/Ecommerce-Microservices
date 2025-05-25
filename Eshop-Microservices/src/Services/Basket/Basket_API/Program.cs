@@ -43,6 +43,9 @@ builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(
 //REST Services
 builder.Services.AddCarter();
 
+//Async Communication Services
+builder.Services.AddMessageBroker(builder.Configuration);
+
 //Cross-Cutting Services
 builder.Services.AddValidatorsFromAssembly(assembly);
 
