@@ -38,10 +38,17 @@ services:
       context: .
       dockerfile: src/Services/Basket/Basket_API/Dockerfile
 
+  yarpapigateways:
+    image: ${DOCKER_REGISTRY-}yarpapigateways
+    build:
+      context: .
+      dockerfile: src/ApiGateways/YarpApiGateways/Dockerfile
+
 volumes:
   postgres_catalog:
   postgres_basket:
   mssql_ordering:
+
 
 
 
