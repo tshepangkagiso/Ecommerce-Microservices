@@ -44,10 +44,20 @@ services:
       context: .
       dockerfile: src/ApiGateways/YarpApiGateways/Dockerfile
 
+
+  shopping.web:
+    image: ${DOCKER_REGISTRY-}shoppingweb
+    build:
+      context: .
+      dockerfile: src/WebApps/Shopping.Web/Dockerfile
+
 volumes:
   postgres_catalog:
   postgres_basket:
   mssql_ordering:
+
+
+
 
 
 
