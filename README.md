@@ -1,4 +1,4 @@
-# 🛍️ E-Commerce Microservices Shop
+# E-Commerce Microservices Shop
 
 A cloud-native e-commerce application.
 
