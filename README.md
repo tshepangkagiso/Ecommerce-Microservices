@@ -19,4 +19,4 @@ A cloud-native e-commerce application.
 - **Frontend**: ASP.NET Core Razor Pages
 - **Other Tools**: Docker, Docker Compose
 
-
+<img width="1432" height="822" alt="Image" src="https://github.com/user-attachments/assets/f596ad90-c8d7-4a30-b65b-3eaec7396a59" />
